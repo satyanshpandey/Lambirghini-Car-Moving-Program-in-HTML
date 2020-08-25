@@ -1,0 +1,127 @@
+/*Lets reset the total default CSS*/
+
+
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+/* Very Important tag:- it just used for hide the scroll bar from the website */
+body{
+    overflow: hidden;
+    animation:  Shake linear .6s infinite;
+}
+
+.sky{
+
+    height: 100vh;
+    width: 100%;
+    background: url(background.jpg);
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+/*For creating sun top on the screen**/
+
+.sun img {
+    height: 47vh;
+    width: 392px;
+    background: url('sun (5).png');
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 11px;
+    left: 374px;
+    animation: wheelRotation linear 15s infinite;
+    background-size: cover;
+}
+
+
+
+.trees{
+    height: 100vh;
+    width: 100%;
+    background: url('trees.png');
+    background-size: cover;
+    position: absolute;
+    top: -21%;
+    
+
+}
+
+.track{
+    height: 30vh;
+    width: 800vw;
+    background: url('track.png');
+    /* background-size: cover; */
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 70vh;
+    animation: CarMove linear 6s infinite;
+}
+
+.car{
+    height: 100px;
+    width: 400px;
+    background-image: url('car_body.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+position: absolute;
+left: 197px;
+bottom: 266px;
+animation: Shake linear .3s infinite;
+/* animation: wheelRotation linear 2s infinite; */
+
+
+}
+
+
+/* .wheel{
+
+} */
+
+.wheel1 img{
+    width: 77px;
+    position: relative;
+    top: 41px;
+    left: 46px;
+    animation: wheelRotation linear .16s infinite;
+}
+
+
+.wheel2 img{
+    width: 77px;
+    position: relative;
+    top: -38px;
+    left: 249px;
+    animation: wheelRotation linear .16s infinite;
+}
+
+/* Animation */
+@keyframes wheelRotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* For moving the car */
+@keyframes CarMove
+{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+/* Shake animation for car */
+@keyframes Shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
